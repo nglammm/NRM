@@ -1,172 +1,804 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NRM - The New Coding Language</title>
-    <style>
-        /* CSS Styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        nav ul {
-            list-style: none;
-            padding: 1rem;
-            text-align: center;
-            background-color: #555;
-        }
-        
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-            margin-top: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        pre {
-            background-color: #f8f8f8;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            overflow-x: auto;
-            white-space: pre-wrap;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: #fff;
-            margin-top: 2rem;
-        }
-        
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        form label {
-            margin: 0.5rem 0 0.2rem;
-        }
-        
-        form input, form textarea, form button {
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        form button {
-            background-color: #333;
-            color: #fff;
-            cursor: pointer;
-        }
-        
-        form button:hover {
-            background-color: #555;
-        }
-    </style>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.jpg">
+   <!-- Primary Meta Tags -->
+   <title>NRM</title>
+   <meta name="keywords"
+      content="NRM. A coding language">
+   <!-- Thẻ link canonical (Chỉ định URL chính thức của trang) -->
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="http://nrm.us.to">
+   <meta name="title" content="NRM Coding Language" />
+   <meta name="description"
+      content="NRM, A coding language" />
+
+   <!-- Open Graph / Facebook -->
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://whiteneurons.com/" />
+   <meta property="og:title" content="White Neuron Company Limited" />
+   <meta property="og:description"
+      content="Công ty White Neuron được sáng lập vào năm 2023. Chúng tôi là một công ty phần mềm đam mê về công nghệ. Chúng tôi cung cấp các sản phẩm liên quan đến trí tuệ nhân tạo và các website tích hợp trí tuệ nhân tạo." />
+   <meta property="og:image" content="assets/img/logo/logo.jpg" />
+
+   <!-- Twitter -->
+   <meta property="twitter:card" content="summary_large_image" />
+   <meta property="twitter:url" content="https://whiteneurons.com/" />
+   <meta property="twitter:title" content="White Neuron Company Limited" />
+   <meta property="twitter:description"
+      content="Công ty White Neuron được sáng lập vào năm 2023. Chúng tôi là một công ty phần mềm đam mê về công nghệ. Chúng tôi cung cấp các sản phẩm liên quan đến trí tuệ nhân tạo và các website tích hợp trí tuệ nhân tạo." />
+   <meta property="twitter:image" content="assets/img/logo/logo.jpg" />
+   <!-- CSS here -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/animate.css">
+   <link rel="stylesheet" href="assets/css/custom-animation.css">
+   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/nice-select.css">
+   <link rel="stylesheet" href="assets/css/flaticon.css">
+   <link rel="stylesheet" href="assets/css/meanmenu.css">
+   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/spacing.css">
+   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to NRM</h1>
-        <p>The New, Simple, and Powerful Coding Language</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About NRM</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#syntax">Syntax</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+   <!-- preloader -->
+   <div id="preloader">
+      <div class="preloader">
+         <span></span>
+         <span></span>
+      </div>
+   </div>
 
-    <section id="about">
-        <h2>About NRM</h2>
-        <p>NRM (Normal) is a programming language designed to simplify coding with easy-to-remember commands and a streamlined syntax. Whether you're new to programming or a seasoned developer, NRM offers a smooth learning curve and powerful functionality.</p>
-    </section>
 
-    <section id="features">
-        <h2>Key Features</h2>
-        <ul>
-            <li>Simple, intuitive syntax</li>
-            <li>Support for multiple data types</li>
-            <li>Functions for handling complex tasks easily</li>
-            <li>Cross-platform compatibility</li>
-            <li>Lightweight and fast</li>
-        </ul>
-    </section>
+   <!-- preloader end  -->
 
-    <section id="syntax">
-        <h2>Basic Syntax</h2>
-        <pre><code>
-// Example of variable assignment
-is x 10
+   <!-- back-to-top-start  -->
+   <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="far fa-angle-double-up"></i>
+   </button>
+   <!-- back-to-top-end  -->
+   <header>
+      <!-- tp-header-area-start -->
+      <div class="tp-header__top-area theme-bg tp-header__space-3 d-none d-sm-block">
+         <div class="container-fluid">
+            <div class="row align-items-center">
+               <div class="col-xxl-8 col-xl-8 col-lg-6 col-md-6 col-6">
+                  <div class="tp-header__top-left">
+                     <a href="mailto:nglamdztop1ff@gmail.com">
+                        <span>NRM is still in development! <b class="frist-child">Get notified when we finish.</b></span>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-6">
+                  <div class="tp-header__top-right text-end">
+                     <a href="https://www.facebook.com/profile.php?id=61561602347106"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.youtube.com/@DontGetTheL"><i class="fab fa-youtube"></i></a>
 
-// Define a function
-define greet name:
-    show "Hello, " + name
-end
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
-// Run function
-run greet with name is: "NRM User"
-        </code></pre>
-    </section>
+      <div id="header-sticky"
+         class="tp-header__area tp-header__space-3 tp-header__bottom tp-header__menu-space p-relative">
+         <div class="container-fluid">
+            <div class="row align-items-center">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-7">
+                  <div class="tp-header__logo">
+                     <a href="/">
+                        <img src="assets/img/logo/logo3.jpg" alt="logo">
+                     </a>
+                  </div>
+               </div>
+               <div class="col-xl-9 col-lg-9 d-none d-lg-block z-index-5">
+                  <div class="tp-header__main-menu tp-header__black-menu tp-header__menu-3">
+                     <nav id="mobile-menu">
+                        <ul>
+                           <li><a href="index.html">Home</a>
+                              <!-- <ul class="submenu">
+                                 <li><a href="/">App Landing</a></li>
+                                 <li><a href="index-2.html">Saas Landing</a></li>
+                                 <li><a href="index-3.html">IT Solution</a></li>
+                              </ul> -->
+                           </li>
+                           <!-- <li><a href="#">Pages</a>
+                              <ul class="submenu">
+                                 <li><a href="about-me.html">About Me</a></li>
+                                 <li><a href="about-us.html">About Us</a></li>
+                                 <li><a href="blog.html">Blog Sidebar</a></li>
+                                 <li><a href="blog-details.html">Blog Details</a></li>
+                                 <li><a href="service.html">Service</a></li>
+                                 <li><a href="service-details.html">Service Details</a></li>
+                                 <li><a href="team.html">Team</a></li>
+                                 <li><a href="price.html">Price</a></li>
+                                 <li><a href="faq.html">Faq</a></li>
+                                 <li><a href="login.html">Login</a></li>
+                                 <li><a href="contact.html">Contact</a></li>
+                              </ul>
+                           </li> -->
+                           <li><a href="downloads.html">Download</a>
+                              <ul class="submenu">
+                                 <li><a href="downloads.html">All-in-one installer</a></li>
+                                 <li><a href="https://github.com/iaminfinityiq/normal">Github</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-5">
+                  <div class="tp-header__right-two d-flex align-items-center justify-content-end">
+                     <!-- <a class="btn-contain d-none d-md-block" href="contact.html"><span>Get Started</span></a> -->
+                     <a class="tp-header__bars tp-menu-bar d-lg-none" href="javascript:void(0)"><i
+                           class="far fa-bars"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+      <!-- tp-header-area-end -->
+   </header>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+   <!-- tp-offcanvus-area-start -->
+   <div class="tp-offcanvas-area">
+      <div class="tpoffcanvas">
+         <div class="tpoffcanvas__close-btn">
+            <button class="close-btn"><i class="fal fa-times"></i></button>
+         </div>
+         <div class="tpoffcanvas__logo">
+            <a href="index.html">
+               <img src="assets/img/logo/logo-w.png" alt="logo">
+            </a>
+         </div>
+         <div class="tpoffcanvas__text">
+            <p></p>
+         </div>
+         <div class="mobile-menu"></div>
+         <div class="tpoffcanvas__info">
+            <h3 class="offcanva-title">Contact</h3>
+            <div class="tp-info-wrapper mb-20 d-flex align-items-center">
+               <div class="tpoffcanvas__info-icon">
+                  <a href="#"><i class="fal fa-envelope"></i></a>
+               </div>
+               <div class="tpoffcanvas__info-address">
+                  <span>Email</span>
+                  <a href="mailto:nglamdztop1ff@gmail.com">nglamdztop1ff@gmail.com</a>
+               </div>
+            </div>
+            </div>
+         </div>
+         <!-- <div class="tpoffcanvas__social">
+            <div class="social-icon">
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+         </div> -->
+      </div>
+   </div>
+   <div class="body-overlay"></div>
+   <!-- tp-offcanvus-area-end -->
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+   <main>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+      <!-- tp-slider-area-start -->
+      <div class="tp-hero__area pt-100 pb-80 p-relative">
+         <div class="tp-hero__shape-3-1 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".7s">
+            <img src="assets/img/hero/hero-shape-3-3.png" alt="hero33">
+         </div>
+         <div class="tp-hero__shape-3-2 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".8s">
+            <img src="assets/img/hero/hero-shape-3-4.png" alt="hero34">
+         </div>
+         <div class="container">
+            <div class="row align-items-start">
+               <div class="col-xl-7 col-lg-6">
+                  <div class="tp-hero__content-box">
+                     <h1 class="tp-hero__title-lg pb-20 theme-color wow tpfadeUp" data-wow-duration=".7s"
+                        data-wow-delay=".3s">Introducing the NRM Language.
+                     </h1>
+                     <p class="wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s">Our attempt to make a new programming language that might changes the coding industry in the future. By the the NRM stands for "NoRMal".
+                     </p>
+                  </div>
+                  <div class="tp-hero__button-box wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".7s">
+                     <a class="btn-contain mb-20 mr-25" href="downloads.html"><span>Download now</span></a>
 
-    <footer>
-        <p>&copy; 2024 NRM Language. All rights reserved.</p>
-    </footer>
+                  </div>
+               </div>
+               <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-center wow tpfadeRight"
+                  data-wow-duration=".7s" data-wow-delay=".8s">
+                  <div class="tp-hero__wrapper-3 d-flex justify-content-center justify-content-lg-end">
+                     <div class="tp-hero__thumb-3">
+                        <img src="assets/img/team/main.jpg" alt="com_main">
+                        <div class="tp-hero__thumb-shape-1">
+                           <img src="assets/img/hero/hero-shape-3-1.png" alt="hero31">
+                        </div>
+                        <div class="tp-hero__thumb-shape-2">
+                           <img src="assets/img/hero/hero-shape-3-2.png" alt="hero32">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- tp-slider-area-end -->
+
+
+      <!-- tp-service-area-start -->
+      <div id="service" class="tp-service__area tp-service__space theme-bg-3 pt-120 pb-100">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="tp-service__section-wrapper d-flex justify-content-between">
+                     <div class="tp-service__title-box ml-40">
+                        <h3 class="tp-service__title wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".3s">The Keys of NRM<br>
+                        </h3>
+                        Some functions that make NRM stands out in other programming languages.
+                     </div>
+                     <!-- <div class="tp-service__play-btn wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s">
+                        <a class="popup-video pulse-btn" href="https://www.youtube.com/watch?v=t0Q2otsqC4I"><i
+                              class="fas fa-play"></i></a>
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+            <div class="tp-service__slider-wrapper">
+               <div class="tp-service__slider-active">
+                  <div class="tp-service__item wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".7s">
+                     <div class="tp-service__icon">
+                        <img src="assets/img/service/service-icon-2.png" alt="anh">
+                     </div>
+                     <div class="tp-service__content">
+                        <h4 class="tp-service__title-sm"><a href="service-details.html"
+                              class="text-truncate d-block w-100">Easy Management</a></h4>
+                        <p>Our programming language made searching and identifying errors/bug spots much easier thanks to it's simple syntax.</p>
+                     </div>
+
+                  </div>
+                  <div class="tp-service__item wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".8s">
+                     <div class="tp-service__icon">
+                        <img src="assets/img/service/service-icon-3.png" alt="anh">
+                     </div>
+                     <div class="tp-service__content">
+                        <h4 class="tp-service__title-sm"><a href="service-details.html"
+                              class="text-truncate d-block w-100">Useful packages</a></h4>
+                        <p>NRM is a combination of normal code and normal installer. It can install packages as well as run .nrm codes.
+                        </p>
+                     </div>
+
+                  </div>
+                  <div class="tp-service__item wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1.2s">
+                     <div class="tp-service__icon">
+                        <img src="assets/img/service/service-icon-1.png" alt="anh">
+                     </div>
+                     <div class="tp-service__content">
+                        <h4 class="tp-service__title-sm"><a href="service-details.html"
+                              class="text-truncate d-block w-100">Helpful resources</a></h4>
+                        <p>Whenever you got an error, there will be an useful link that explains the causes of that error as well as fixes, helps less time for searching for that error.</p>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- tp-service-area-end -->
+
+
+      <!-- tp-counter-area-start -->
+      <!-- <div id="about" class="tp-counter-2__area tp-counter-2__space theme-bg-3 pb-100">
+         <div class="container">
+            <div class="tp-counter-2__wrapper pt-65">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".3s">
+                     <div class="tp-counter-2__item d-flex align-items-center ">
+                        <div class="tp-counter-2__icon">
+                           <img src="assets/img/counter/counter-1.png" alt="anh">
+                        </div>
+                        <div class="tp-counter-2__content">
+                           <h4><span class="counter" data-counter-time="1000" data-counter-delay="5">5</span>+</h4>
+                           <span>Years of Experience </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".5s">
+                     <div class="tp-counter-2__item d-flex align-items-center ">
+                        <div class="tp-counter-2__icon">
+                           <img src="assets/img/counter/counter-2.png" alt="anh">
+                        </div>
+                        <div class="tp-counter-2__content">
+                           <h4><span class="counter" data-counter-time="1000" data-counter-delay="5">100</span>+</h4>
+                           <span>Projects completed </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".7s">
+                     <div class="tp-counter-2__item d-flex ">
+                        <div class="tp-counter-2__icon">
+                           <img src="assets/img/counter/counter-3.png" alt="anh">
+                        </div>
+                        <div class="tp-counter-2__content">
+                           <h4 class="counter" data-counter-time="1000" data-counter-delay="5">10</h4>
+                           <span>Awards achieved </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".8s">
+                     <div class="tp-counter-2__item d-flex align-items-center ">
+                        <div class="tp-counter-2__icon">
+                           <img src="assets/img/counter/counter-4.png" alt="anh">
+                        </div>
+                        <div class="tp-counter-2__content">
+                           <h4><span class="counter" data-counter-time="1000" data-counter-delay="5">500</span>+</h4>
+                           <span>Satisfied clients</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- tp-counter-area-end -->
+
+
+      <!-- tp-about-area-start -->
+      <div class="tp-about__area pt-120 pb-120 p-relative">
+         <div class="tp-about__shape-3-1">
+            <img src="assets/img/hero/hero-shape-3-5.png" alt="anh">
+         </div>
+         <div class="tp-about__shape-3-2">
+            <img src="assets/img/hero/hero-shape-3-6.png" alt="anh">
+         </div>
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-center wow tpfadeLeft"
+                  data-wow-duration=".7s" data-wow-delay=".5s">
+                  <div class="tp-about__thumb-wrapper d-flex justify-content-center p-relative">
+                     <div class="tp-about__shape-1">
+                        <img src="assets/img/hero/hero-shape-3-1.png" alt="anh">
+                     </div>
+                     <div class="tp-about__shape-2">
+                        <img src="assets/img/hero/hero-shape-3-2.png" alt="anh">
+                     </div>
+                     <div class="tp-about__thumb">
+                        <img src="assets/img/logo/logo.jpg" alt="anh">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".7s" data-wow-delay=".7s">
+                  <div class="tp-about__section-box">
+                     <h3 class="tp-section-title-md pb-30">The power of simplificancy <br>All in NRM</h3>
+                     <div class="tp-about__text">
+                        <p>NRM is an excellent programming language in the fields of simplificancy and time. Since the syntax of this programming language is easy to remember, you can easily code whatever you'd imagine in the shortest time.</p>
+                        <p>With the simplificancy key on hand, dreams are just 1 step away from reality.</p>
+                     </div>
+                     <a class="tp-btn-blue-square" href="downloads.html"><span>Download now</span></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- tp-about-area-end -->
+
+
+      <!-- tp-project-area-start -->
+      <!-- <div class="tp-project__area grey-bg pt-120 pb-90">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="tp-project__section-box d-flex justify-content-between align-items-center wow tpfadeUp"
+                     data-wow-duration=".7s" data-wow-delay=".3s">
+                     <h3 class="tp-section-title-md">Latest projects from <br> our team</h3>
+                     <a class="tp-btn-blue-square" href="project.html"><span>See all work</span></a>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".7s" data-wow-delay=".5s">
+                  <div class="tp-project__item mb-30">
+                     <div class="tp-project__thumb fix">
+                        <a href="project-details.html"><img src="assets/img/team/team-1.jpg" alt="anh"></a>
+                     </div>
+                     <div class="tp-project__content">
+                        <h3 class="tp-project__title"><a href="project-details.html">Hosting Website Design</a></h3>
+                        <p>At Quitox we specialize in designing, building, shipping...</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".7s" data-wow-delay=".7s">
+                  <div class="tp-project__item mb-30">
+                     <div class="tp-project__thumb fix">
+                        <a href="project-details.html"><img src="assets/img/team/team-2.jpg" alt="anh"></a>
+                     </div>
+                     <div class="tp-project__content">
+                        <h3 class="tp-project__title"><a href="project-details.html">Web Design Company</a></h3>
+                        <p>At Quitox we specialize in designing, building, shipping...</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".7s" data-wow-delay=".8s">
+                  <div class="tp-project__item mb-30">
+                     <div class="tp-project__thumb fix">
+                        <a href="project-details.html"><img src="assets/img/team/team-3.jpg" alt="anh"></a>
+                     </div>
+                     <div class="tp-project__content">
+                        <h3 class="tp-project__title"><a href="project-details.html">Business Setup & Company</a></h3>
+                        <p>At Quitox we specialize in designing, building, shipping...</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".7s" data-wow-delay="1s">
+                  <div class="tp-project__item mb-30">
+                     <div class="tp-project__thumb fix">
+                        <a href="project-details.html"><img src="assets/img/team/team-4.jpg" alt="anh"></a>
+                     </div>
+                     <div class="tp-project__content">
+                        <h3 class="tp-project__title"><a href="project-details.html">Mainland Company Formation</a></h3>
+                        <p>At Quitox we specialize in designing, building, shipping...</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- tp-project-area-end -->
+
+
+      <!-- tp-team-area-start -->
+      <!-- <div id="Teams" class="tp-team__area p-relative">
+         <div class="tp-team__grey-bg grey-bg"></div>
+         <div class="tp-team__ml-mr theme-bg-3 pt-120 pb-50">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s">
+                     <div class="tp-team__section-box d-flex justify-content-between">
+                        <h3 class="tp-section-title-md text-white">Meet with our team</h3>
+                         <div class="tp-team__btn">
+                           <a class="btn-outline-w mb-15" href="team.html"><span>All Team Member</span></a>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-70 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".5s">
+                     <div class="tp-team__item text-center">
+                        <div class="tp-team__img fix overflow-hidden">
+                           <img src="assets/img/team/tu_anh.jpg" alt="anh">
+                        </div>
+                        <div class="tp-team__content">
+                           <h4 class="tp-team__title"><a href="about-me.html">Nguyen Tu Anh</a></h4>
+                           <span>Founder & CEO</span>
+                        </div>
+                        <div class="tp-team__social">
+                           <a href="#"><i class="fab fa-youtube"></i></a>
+                           <a href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#"><i class="fab fa-twitter"></i></a>
+                           <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-70 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".7s">
+                     <div class="tp-team__item text-center">
+                        <div class="tp-team__img fix overflow-hidden">
+                           <img src="assets/img/team/tu_anh.jpg" alt="anh">
+                        </div>
+                        <div class="tp-team__content">
+                           <h4 class="tp-team__title"><a href="about-me.html">Nguyen Tu Anh</a></h4>
+                           <span>AI Solution</span>
+                        </div>
+                        <div class="tp-team__social">
+                           <a href="#"><i class="fab fa-youtube"></i></a>
+                           <a href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#"><i class="fab fa-twitter"></i></a>
+                           <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-70 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".8s">
+                     <div class="tp-team__item text-center">
+                        <div class="tp-team__img fix overflow-hidden">
+                           <img src="assets/img/team/tu_anh.jpg" alt="anh">
+                        </div>
+                        <div class="tp-team__content">
+                           <h4 class="tp-team__title"><a href="about-me.html">Nguyen Tu Anh</a></h4>
+                           <span>Data Solution</span>
+                        </div>
+                        <div class="tp-team__social">
+                           <a href="#"><i class="fab fa-youtube"></i></a>
+                           <a href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#"><i class="fab fa-twitter"></i></a>
+                           <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 mb-70 wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay="1s">
+                     <div class="tp-team__item text-center">
+                        <div class="tp-team__img fix overflow-hidden">
+                           <img src="assets/img/team/tu_anh.jpg" alt="anh">
+                        </div>
+                        <div class="tp-team__content">
+                           <h4 class="tp-team__title"><a href="about-me.html">Nguyen Tu Anh</a></h4>
+                           <span>Product manager</span>
+                        </div>
+                        <div class="tp-team__social">
+                           <a href="#"><i class="fab fa-youtube"></i></a>
+                           <a href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#"><i class="fab fa-twitter"></i></a>
+                           <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- tp-team-area-end -->
+
+
+      <!-- tp-testimonial-area-start -->
+      <div class="tp-testimonial-3__area pt-120 pb-100 p-relative">
+         <div class="tp-testimonial-3__shape-3-1">
+            <img src="assets/img/hero/hero-shape-3-3.png" alt="anh">
+         </div>
+         <div class="tp-testimonial-3__shape-3-2">
+            <img src="assets/img/hero/hero-shape-3-4.png" alt="anh">
+         </div>
+         <!-- <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-xl-6">
+                  <div class="tp-testimonial-3__section-box text-center wow tpfadeUp" data-wow-duration=".7s"
+                     data-wow-delay=".3s">
+                     <h3 class="tp-section-title-md">The Trust From <br> Clients</h3>
+                  </div>
+               </div>
+            </div>
+            <div class="tp-testimonial-3__wrapper">
+               <div class="row">
+                  <div class="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".7s" data-wow-delay=".5s">
+                     <div class="tp-testimonial-3__item d-flex mb-25">
+                        <div class="tp-testimonial-3__icon">
+                           <img src="assets/img/hero/hero-circle-icon-1.png" alt="anh">
+                        </div>
+                        <div class="tp-testimonial-3__content">
+                           <p>Wow. What a great experience copywriter. for Quixtex is a very talented digital agnecy.
+                              best yesterday apps i ever seeWow. What a great experience copywriter. for Quixtex is a
+                              very talented digital agnecy. best yesterday apps i ever seeWow. What a great experience
+                              copywriter. for Quixtex is a very talented digital agnecy. best yesterday apps i ever see
+                           </p>
+                           <div class="tp-testimonial-3__author">
+                              <h4>Alextina De <span>(Slack)</span></h4>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tp-testimonial-3__item tp-testimonial-3__item-2 d-flex mb-25">
+                        <div class="tp-testimonial-3__icon">
+                           <img src="assets/img/hero/hero-circle-icon-2.png" alt="anh">
+                        </div>
+                        <div class="tp-testimonial-3__content">
+                           <p>Wow. What a great experience copywriter. for Quixtex is a very talented digital agnecy.
+                              best yesterday apps i ever see
+                           </p>
+                           <div class="tp-testimonial-3__author">
+                              <h4>Amber Tarry <span>(Slack)</span></h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6">
+                     <div class="tp-testimonial-3__item tp-testimonial-3__item-2 d-flex mb-25 wow tpfadeUp"
+                        data-wow-duration=".7s" data-wow-delay=".7s">
+                        <div class="tp-testimonial-3__icon">
+                           <img src="assets/img/hero/hero-circle-icon-4.png" alt="anh">
+                        </div>
+                        <div class="tp-testimonial-3__content">
+                           <p>Wow. What a great experience copywriter. for Quixtex is a very talented digital agnecy.
+                              best yesterday apps i ever see
+                           </p>
+                           <div class="tp-testimonial-3__author">
+                              <h4>D. Takahashi <span>(Robert)</span></h4>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tp-testimonial-3__item tp-testimonial-3__item-2 d-flex mb-25 wow tpfadeUp"
+                        data-wow-duration=".7s" data-wow-delay=".8s">
+                        <div class="tp-testimonial-3__icon">
+                           <img src="assets/img/hero/hero-circle-icon-3.png" alt="anh">
+                        </div>
+                        <div class="tp-testimonial-3__content">
+                           <p>Wow. What a great experience copywriter. for Quixtex is a very talented digital agnecy.
+                              best yesterday apps i ever see
+                           </p>
+                           <div class="tp-testimonial-3__author">
+                              <h4>Melvin <span>(J. Reed)</span></h4>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tp-testimonial-3__item tp-testimonial-3__item-2 d-flex mb-25 wow tpfadeUp"
+                        data-wow-duration=".7s" data-wow-delay="1s">
+                        <div class="tp-testimonial-3__icon">
+                           <img src="assets/img/hero/hero-circle-icon-1.png" alt="anh">
+                        </div>
+                        <div class="tp-testimonial-3__content">
+                           <p>Wow. What a great experience copywriter. for Quixtex is a very talented digital agnecy.
+                              best yesterday apps i ever see
+                           </p>
+                           <div class="tp-testimonial-3__author">
+                              <h4>L. Young <span>(Jordan)</span></h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+      </div>
+      <!-- tp-testimonial-area-end -->
+
+
+      <!-- tp-blog-area-start -->
+      <!-- <div class="tp-blog__area grey-bg pt-120 pb-120">
+         <div class="container">
+            <div class="row">
+               <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".3s">
+                  <div class="tp-blog__section-box d-flex justify-content-between align-items-center">
+                     <h3 class="tp-section-title-md">Read our recent blog<br> & article</h3>
+                     <a class="tp-btn-blue-square" href="blog.html"><span>See all Blog</span></a>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 mb-30 wow tpfadeLeft" data-wow-duration=".7s" data-wow-delay=".5s">
+                  <div class="tp-blog__item">
+                     <div class="tp-blog__thumb fix">
+                        <a href="blog-details.html"><img src="assets/img/blog/blog-1.jpg" alt="anh"></a>
+                     </div>
+                     <div class="tp-blog__content-wrapper">
+                        <div class="tp-blog__tag">
+                           <span>Tutorials</span>
+                        </div>
+                        <div class="tp-blog__content">
+                           <h3 class="tp-blog__title"><a href="blog-details.html">How to add a count up animation <br>
+                                 the webflow site.</a></h3>
+                           <p>Specialize in designing, building, shipping and scaling <br> beautiful, usable products
+                              with blazing-fast</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 mb-30 wow tpfadeRight" data-wow-duration=".7s" data-wow-delay=".7s">
+                  <div class="tp-blog__item">
+                     <div class="tp-blog__thumb fix">
+                        <a href="blog-details.html"><img src="assets/img/blog/blog-2.jpg" alt="anh"></a>
+                     </div>
+                     <div class="tp-blog__content-wrapper">
+                        <div class="tp-blog__tag">
+                           <span>Design</span>
+                        </div>
+                        <div class="tp-blog__content">
+                           <h3 class="tp-blog__title"><a href="blog-details.html">Is your company facing a social media
+                                 crisis?</a></h3>
+                           <p>Specialize in designing, building, shipping and scaling <br> beautiful, usable products
+                              with blazing-fast</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- tp-blog-area-end -->
+
+
+   </main>
+
+   <footer>
+      <!-- tp-footer-area-start -->
+      <div class="tp-footer__area theme-bg pt-100 pb-50">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="tp-footer__content text-center">
+                     <img class="tp-footer__logo wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".3s"
+                        src="/assets/img/logo/logo-w.png" alt="">
+                     <h1 class="tp-section-title text-uppercase text-white wow tpfadeUp" data-wow-duration=".7s"
+                        data-wow-delay=".3s">
+                        The NRM GROUP</h1>
+                     <div class="tp-footer__infor">
+                        <p class="wow  tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s"><b>Creators: </b><a
+                              target="_blank" href="http://mrlam.us.to">@Lam, @Iaminfinityiq</a></p>
+                        <p class="wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s"><b>Website: </b><a
+                              target="_blank" href="http://nrm.us.to">nrm.us.to</a></p>
+                        <p class="wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s"><b>Version:
+                           </b>WIP</p>
+                        <p class="wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s"><b>Email: </b><a
+                              href="mailto:nglamdztop1ff@gmail.com">nglamdztop1ff@gmail.com</a></p>
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="tp-footer-bottom__area mt-60 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".8s">
+            <div class="container">
+               <div class="tp-footer-bottom__border-top pt-40">
+                  <div class="row align-items-center ">
+                     <!-- <div class="col-xl-2 col-lg-2 col-md-6 col-12 order-2 order-lg-1 text-center text-md-start">
+                        <div class="tp-footer-bottom__logo">
+                           <a href="/"><img src="assets/img/logo/logo-w.png" alt="anh"></a>
+                        </div>
+                     </div> -->
+                     <div
+                        class="col-xl-8 col-lg-8 col-md-12 col-12 j d-flex justify-content-sm-center justify-content-lg-start order-1 order-lg-2 ">
+                        <div class="tp-footer-bottom__menu">
+                           <ul>
+                              <li><a href="index.html">HOME</a></li>
+                              <li><a href="downloads.html">DOWNLOAD</a></li>
+                              <li><a href="contact.html">CONTACT</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div
+                        class="col-xl-4 col-lg-4 col-md-12 col-12 order-2 order-lg-3 justify-content-sm-center justify-content-lg-end text-center text-md-end">
+                        <div class="tp-footer-bottom__social">
+                           <ul>
+                              <li><a href="https://www.facebook.com/profile.php?id=61561602347106"><i class="fab fa-facebook-f"></i></a></li>
+                              <li><a href="https://www.youtube.com/@DontGetTheL"><i class="fab fa-youtube"></i></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- tp-footer-area-end -->
+   </footer>
+
+   <!-- JS here -->
+   <script src="assets/js/jquery.js"></script>
+   <script src="assets/js/waypoints.js"></script>
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/swiper-bundle.js"></script>
+   <script src="assets/js/slick.js"></script>
+   <script src="assets/js/magnific-popup.js"></script>
+   <script src="assets/js/counterup.js"></script>
+   <script src="assets/js/wow.js"></script>
+   <script src="assets/js/nice-select.js"></script>
+   <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/isotope-pkgd.js"></script>
+   <script src="assets/js/imagesloaded-pkgd.js"></script>
+   <script src="assets/js/ajax-form.js"></script>
+   <script src="assets/js/main.js"></script>
+
+
+
 </body>
+
 </html>
